@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from "sonner";
 import {
   Route,
   createBrowserRouter,
@@ -21,7 +22,12 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <Toaster richColors /> {/* Place Toaster here */}
+      <RouterProvider router={router} />
+    </>
+  );
 };
 
 export default App;

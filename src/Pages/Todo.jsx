@@ -12,7 +12,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons"; 
-
+import { toast } from "sonner";
 const Todo = () => {
   const [todo, setTodo] = useState({});
   const [isEditing, setIsEditing] = useState(false);
@@ -40,7 +40,16 @@ const Todo = () => {
     try {
       await axios.delete(`http://localhost:3000/todolist/${id}`);
       navigate("/");
+
+      const formattedDate = new Date(todo.date).toLocaleString();
+      toast.error(`${todo.title} deleted successfully!`, {
+        description: ` ${formattedDate}`,
+      });
+0      
     } catch (error) {
+      toast.error("Failed to add To-do", {
+              description: error.message,
+            });
       console.log(error);
     }
   };
@@ -61,6 +70,12 @@ const Todo = () => {
       await axios.put(`http://localhost:3000/todolist/${id}`, editedTodo);
       setTodo(editedTodo); // Update the displayed data
       setIsEditing(false); // Exit edit mode
+
+      const formattedDate = new Date(todo.date).toLocaleString();
+      toast.success(`${todo.title} updated successfully!`, {
+        description: ` ${formattedDate}`,
+        
+      });
     } catch (error) {
       console.log(error);
     }
