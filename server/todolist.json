@@ -1,0 +1,61 @@
+{
+  "todolist": [
+    {
+      "id": "1",
+      "title": "Complete Project Proposal",
+      "description": "Draft and finalize the project proposal document.",
+      "date": "2025-02-22"
+    },
+    {
+      "id": "2",
+      "title": "Team Meeting",
+      "description": "Discuss progress and assign tasks for the upcoming sprint.",
+      "date": "2025-02-23"
+    },
+    {
+      "id": "4",
+      "title": "Deploy API Update",
+      "description": "Deploy the latest version of the API with new features and fixes.",
+      "date": "2025-02-25"
+    },
+    {
+      "id": "9",
+      "title": "ReactJs Workshop",
+      "description": "learning reactjs\n",
+      "date": "2025-02-26"
+    },
+    {
+      "id": "6",
+      "title": "vb",
+      "description": "egg",
+      "date": "2025-02-22"
+    },
+    {
+      "id": "4",
+      "title": "vbfbbfb",
+      "description": "vdb",
+      "date": "2025-02-21"
+    },
+    {
+      "id": "10",
+      "title": "Buy groceries",
+      "description": "Milk, Bread, Eggs, Cheese",
+      "date": "2025-02-21",
+      "completed": false
+    },
+    {
+      "id": "11",
+      "title": "Complete React project",
+      "description": "Finish UI and API integration",
+      "date": "2025-02-22",
+      "completed": true
+    },
+    {
+      "id": "12",
+      "title": "Workout",
+      "description": "1-hour gym session",
+      "date": "2025-02-23",
+      "completed": false
+    }
+  ]
+}
